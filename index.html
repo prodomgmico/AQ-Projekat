@@ -149,7 +149,7 @@
     <!-- ================================ -->
     <!-- HERO SECTION 2 - Business Consulting -->
     <!-- ================================ -->
-    <section class="section-overlap second animate-section min-h-screen flex items-center bg-[#232629] text-white">
+    <section class="section-overlap second animate-section min-h-screen flex items-center bg-[#232629] text-white shadow-2xl relative z-70" style="border-top-left-radius: 1.5rem; border-top-right-radius: 1.5rem; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6 py-16">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="relative order-2 lg:order-1 animate-hidden animate-in-left">
@@ -185,7 +185,7 @@
     <!-- ================================ -->
     <!-- HERO SECTION 3 - Tax Advisory -->
     <!-- ================================ -->
-    <section class="section-overlap third animate-section min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="section-overlap third animate-section min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-blue-50 shadow-2xl relative z-60" style="border-top-left-radius: 1.5rem; border-top-right-radius: 1.5rem; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6 py-16">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
@@ -221,7 +221,7 @@
     <!-- ================================ -->
     <!-- GUIDANCE SECTION -->
     <!-- ================================ -->
-    <section class="section-overlap fourth animate-section py-20 bg-white">
+    <section class="section-overlap fourth animate-section py-20 bg-white shadow-2xl relative z-50" style="border-top-left-radius: 1.5rem; border-top-right-radius: 1.5rem; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
@@ -254,7 +254,7 @@
     <!-- ================================ -->
     <!-- STATS SECTION -->
     <!-- ================================ -->
-    <section class="section-overlap animate-section py-20 bg-[#232629] text-white">
+    <section class="section-overlap animate-section py-20 bg-[#232629] text-white shadow-2xl relative z-45" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl lg:text-4xl font-bold text-center mb-16 animate-hidden animate-in">
                 Brojke Koje Govore O Našem Uspehe
@@ -283,7 +283,7 @@
     <!-- ================================ -->
     <!-- SERVICES GRID SECTION -->
     <!-- ================================ -->
-    <section class="section-overlap animate-section py-20 bg-gray-50" id="services">
+    <section class="section-overlap animate-section py-20 bg-gray-50 shadow-2xl relative z-44" id="services" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-sm font-semibold text-[#0F74BC] uppercase tracking-wide mb-3 animate-hidden animate-slide-top">
@@ -511,7 +511,7 @@
     <!-- ================================ -->
     <!-- BUSINESS JOURNEY SECTION -->
     <!-- ================================ -->
-    <section class="section-overlap animate-section py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50" id="journey">
+    <section class="section-overlap animate-section py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 shadow-2xl relative z-43" id="journey" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">
@@ -525,8 +525,9 @@
                 </p>
             </div>
             
-            <div class="space-y-12 lg:space-y-0 lg:flex lg:items-center lg:justify-between lg:space-x-8 relative">
-                <!-- Mobile: Vertical Layout, Desktop: Horizontal -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:space-x-0" id="timeline-container">
+                <!-- Mobile: Grid Layout like Services, Desktop: Horizontal Layout -->
+                
                 <div class="timeline-step bg-white rounded-2xl p-8 lg:flex-1 transition-all duration-500 shadow-lg" data-step="1">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg">1</div>
@@ -599,11 +600,6 @@
             </div>
 
             <div class="mt-16 text-center">
-                <div class="bg-gradient-to-r from-gray-200 to-gray-300 h-4 rounded-full mb-6 shadow-inner">
-                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-4 rounded-full transition-all duration-1000 shadow-lg relative overflow-hidden" style="width: 0%" id="journeyProgress">
-                        <div class="absolute inset-0 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
-                    </div>
-                </div>
                 <p class="text-gray-600 mb-8 text-lg">Gde se trenutno nalazite u vašem poslovnom putu?</p>
                 <div class="space-y-6">
                     <h3 class="text-3xl font-bold text-gray-900">Spremni Za Sledeći Korak?</h3>
@@ -617,7 +613,7 @@
     <!-- ================================ -->
     <!-- TESTIMONIALS SECTION -->
     <!-- ================================ -->
-    <section class="section-overlap animate-section py-20 bg-gray-900 text-white" id="clients">
+    <section class="section-overlap animate-section py-20 bg-gray-900 text-white shadow-2xl relative z-42" id="clients" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mb-3 animate-hidden animate-slide-top">
@@ -708,7 +704,7 @@
     <!-- ================================ -->
     <!-- CONTACT SECTION -->
     <!-- ================================ -->
-    <section class="section-overlap animate-section py-20 bg-gray-50" id="contact">
+    <section class="section-overlap animate-section py-20 bg-gray-50 shadow-2xl relative z-41" id="contact" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">
@@ -832,7 +828,7 @@
     <!-- ================================ -->
     <!-- FOOTER -->
     <!-- ================================ -->
-    <footer class="section-overlap bg-gray-900 text-white py-12">
+    <footer class="section-overlap bg-gray-900 text-white py-12 shadow-2xl relative z-80" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-gray-400">&copy; 2025 AQ Accounting. Sva prava zadržana.</p>
         </div>
