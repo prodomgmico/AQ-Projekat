@@ -306,13 +306,22 @@ function startDesktopFadeIn(element) {
     element.style.transform = 'translateY(0px)';
 }
 
-// VANILLA JS Counter animation bez anime.js
+// VANILLA JS Counter animation sa formatiranjem brojeva
 function animateVanillaCounter(element) {
     const target = parseInt(element.getAttribute('data-target'));
     let current = 0;
     const increment = target / 120; // 120 frames za smooth animation (2 seconds at 60fps)
     const duration = 2000; // 2 seconds
     const startTime = Date.now();
+    
+    // Proveravamo da li je ovo procenat ili običan broj
+    const isPercentage = element.textContent.includes('%');
+    const suffix = isPercentage ? '%' : '+';
+    
+    // Funkcija za formatiranje broja sa zarezima
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     
     function updateCounter() {
         const elapsed = Date.now() - startTime;
@@ -322,12 +331,15 @@ function animateVanillaCounter(element) {
         const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
         
         current = target * easedProgress;
-        element.textContent = Math.floor(current);
+        const displayNumber = Math.floor(current);
+        
+        // Formatiranje sa zarezima i dodavanje odgovarajućeg sufiksa
+        element.textContent = formatNumber(displayNumber) + suffix;
         
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = target;
+            element.textContent = formatNumber(target) + suffix;
         }
     }
     
@@ -389,7 +401,7 @@ function initTimelineAnimation() {
             width: var(--timer-width, 0%) !important;
             height: 4px !important;
             background: linear-gradient(90deg, #3b82f6, #1d4ed8) !important;
-            border-radius: 0 0 8px 8px !important;
+            border-radius: 0 0 1.5rem 1.5rem !important;
             transition: width 0.2s ease-out !important;
             z-index: 10 !important;
             box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4) !important;
@@ -408,7 +420,7 @@ function initTimelineAnimation() {
             width: 100% !important;
             height: 4px !important;
             background: linear-gradient(90deg, #10b981, #059669) !important;
-            border-radius: 0 0 8px 8px !important;
+            border-radius: 0 0 1.5rem 1.5rem !important;
             transition: width 0.3s ease-in-out !important;
             z-index: 10 !important;
             box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4) !important;
@@ -776,22 +788,49 @@ function initModal() {
     }
 }
 
-// Initialize counters when they come into view
+// Initialize counters when stats section comes into view
 function initCounters() {
     const counters = document.querySelectorAll('[data-target]');
+    const statsSection = document.querySelector('#stats'); // Simple ID selector
+    
+    if (!statsSection) {
+        console.log('Stats section not found, falling back to individual counter observation');
+        // Fallback to original logic if section not found
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    animateVanillaCounter(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+        return;
+    }
+    
+    console.log('Stats section found, setting up synchronized counter animation');
     
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                entry.target.classList.add('counted');
-                animateVanillaCounter(entry.target); // Use vanilla counter
+            if (entry.isIntersecting && !entry.target.hasAttribute('data-counters-started')) {
+                console.log('Stats section in viewport, starting all counters');
+                entry.target.setAttribute('data-counters-started', 'true');
+                
+                // Start all counters at the same time
+                counters.forEach(counter => {
+                    if (!counter.classList.contains('counted')) {
+                        counter.classList.add('counted');
+                        animateVanillaCounter(counter);
+                    }
+                });
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 }); // Lower threshold for mobile
     
-    counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
+    counterObserver.observe(statsSection);
 }
 
 // 🎯 MOBILE HOVER-LIKE VIEWPORT EFFECT

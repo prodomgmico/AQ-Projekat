@@ -130,7 +130,7 @@
                         <p>AQ Accounting pruža kompletne knjigovodstvene usluge i biznis konsalting za preduzeća u Crnoj Gori.</p>
                         <p>Naš tim iskusnih stručnjaka pomaže vašem biznisu da raste kroz profesionalno finansijsko upravljanje.</p>
                     </div>
-                    <button class="bg-[#0F74BC] hover:bg-[#0A5A94] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-hidden animate-scale hover-lift btn-glow">
+                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
                         Besplatna Konsultacija
                     </button>
                 </div>
@@ -173,7 +173,7 @@
                         <p>Kroz stručno savetovanje i strategije prilagođene crnogorskom tržištu.</p>
                     </div>
                     <div class="flex justify-center sm:justify-start">
-                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg">
+                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
                             Kontaktirajte Nas
                         </button>
                     </div>
@@ -200,7 +200,7 @@
                         <p>Obezbedimo da vaš biznis bude u potpunosti usklađen sa poreskim propisima Crne Gore.</p>
                         <p>Naše usluge uključuju pripremu poreskih prijava, poresko planiranje i savetovanje za optimizaciju poreskih obaveza.</p>
                     </div>
-                    <button class="bg-[#0F74BC] hover:bg-[#0A5A94] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-hidden animate-scale hover-lift btn-glow">
+                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
                         Počnite Danas
                     </button>
                 </div>
@@ -235,7 +235,7 @@
                         Sa više od 10 godina iskustva u księgowskeodstvu i biznis konsaltingu, AQ Accounting je vaš pouzdani partner za finansijski uspeh u Crnoj Gori. Naš stručni tim posvećen je vašem poslovnom rastu.
                     </p>
                     <div class="flex justify-center lg:justify-start">
-                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg">
+                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
                             Kontaktirajte Nas
                         </button>
                     </div>
@@ -254,14 +254,14 @@
     <!-- ================================ -->
     <!-- STATS SECTION -->
     <!-- ================================ -->
-    <section class="section-overlap animate-section py-20 bg-[#232629] text-white shadow-2xl relative z-45" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
+    <section class="section-overlap animate-section py-20 bg-[#232629] text-white shadow-2xl relative z-45" id="stats" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl lg:text-4xl font-bold text-center mb-16 animate-hidden animate-in">
                 Brojke Koje Govore O Našem Uspehe
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center animate-hidden animate-scale">
-                    <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="10">0+</div>
+                    <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="25">0+</div>
                     <div class="text-gray-300 font-medium">Godina Iskustva</div>
                 </div>
                 <div class="text-center animate-hidden animate-scale">
@@ -269,11 +269,11 @@
                     <div class="text-gray-300 font-medium">Zadovoljnih Klijenata</div>
                 </div>
                 <div class="text-center animate-hidden animate-scale">
-                    <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="2000">0+</div>
-                    <div class="text-gray-300 font-medium">Obrađenih Dokumenata</div>
+                    <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="10000000" style="transform: translateX(-0.1em);">0</div>
+                    <div class="text-gray-300 font-medium">EUR Proknjiženo Godišnje</div>
                 </div>
                 <div class="text-center animate-hidden animate-scale">
-                    <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="95">0%</div>
+                    <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="98">0%</div>
                     <div class="text-gray-300 font-medium">Zadovoljstvo Klijenata</div>
                 </div>
             </div>
@@ -499,7 +499,7 @@
                     <h3 class="text-2xl font-bold text-gray-900">Potrebne Vam Profesionalne Usluge?</h3>
                     <p class="text-gray-600 text-lg max-w-2xl mx-auto">Kontaktirajte nas za besplatnu konsultaciju i prilagođenu ponudu za vaše potrebe</p>
                     <div class="flex justify-center">
-                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg">
+                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
                             Zatražite Ponudu
                         </button>
                     </div>
@@ -531,7 +531,16 @@
                 <div class="timeline-step bg-white rounded-2xl p-8 lg:flex-1 transition-all duration-500 shadow-lg" data-step="1">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg">1</div>
-                        <div class="text-5xl mb-4">🚀</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto mb-4">
+                            <defs>
+                                <linearGradient id="iconGradientRocket" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="15%" style="stop-color:hsla(222, 58%, 36%, 1)"/>
+                                    <stop offset="72%" style="stop-color:hsla(198, 100%, 50%, 1)"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#iconGradientRocket)" fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" clip-rule="evenodd" />
+                            <path fill="url(#iconGradientRocket)" d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z" />
+                        </svg>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Start</h4>
                         <p class="text-gray-600 mb-4 font-medium">Ideja i planiranje</p>
                         <ul class="text-sm text-gray-600 space-y-2">
@@ -545,7 +554,16 @@
                 <div class="timeline-step bg-white rounded-2xl p-8 lg:flex-1 transition-all duration-500 shadow-lg" data-step="2">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg">2</div>
-                        <div class="text-5xl mb-4">📋</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto mb-4">
+                            <defs>
+                                <linearGradient id="iconGradientClipboard" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="15%" style="stop-color:hsla(222, 58%, 36%, 1)"/>
+                                    <stop offset="72%" style="stop-color:hsla(198, 100%, 50%, 1)"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#iconGradientClipboard)" fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                            <path fill="url(#iconGradientClipboard)" fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                        </svg>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Registracija</h4>
                         <p class="text-gray-600 mb-4 font-medium">Osnivanje firme</p>
                         <ul class="text-sm text-gray-600 space-y-2">
@@ -559,7 +577,15 @@
                 <div class="timeline-step bg-white rounded-2xl p-8 lg:flex-1 transition-all duration-500 shadow-lg" data-step="3">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg">3</div>
-                        <div class="text-5xl mb-4">📊</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto mb-4">
+                            <defs>
+                                <linearGradient id="iconGradientChart" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="15%" style="stop-color:hsla(222, 58%, 36%, 1)"/>
+                                    <stop offset="72%" style="stop-color:hsla(198, 100%, 50%, 1)"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#iconGradientChart)" fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm4.5 7.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75Zm3.75-1.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V12Zm2.25-3a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0V9.75A.75.75 0 0 1 13.5 9Zm3.75-1.5a.75.75 0 0 0-1.5 0v9a.75.75 0 0 0 1.5 0v-9Z" clip-rule="evenodd" />
+                        </svg>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Pokretanje</h4>
                         <p class="text-gray-600 mb-4 font-medium">Prvi koraci</p>
                         <ul class="text-sm text-gray-600 space-y-2">
@@ -573,7 +599,15 @@
                 <div class="timeline-step bg-white rounded-2xl p-8 lg:flex-1 transition-all duration-500 shadow-lg" data-step="4">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg">4</div>
-                        <div class="text-5xl mb-4">📈</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto mb-4">
+                            <defs>
+                                <linearGradient id="iconGradientTrending" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="15%" style="stop-color:hsla(222, 58%, 36%, 1)"/>
+                                    <stop offset="72%" style="stop-color:hsla(198, 100%, 50%, 1)"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#iconGradientTrending)" fill-rule="evenodd" d="M15.22 6.268a.75.75 0 0 1 .968-.431l5.942 2.28a.75.75 0 0 1 .431.97l-2.28 5.94a.75.75 0 1 1-1.4-.537l1.63-4.251-1.086.484a11.2 11.2 0 0 0-5.45 5.173.75.75 0 0 1-1.199.19L9 12.312l-6.22 6.22a.75.75 0 0 1-1.06-1.061l6.75-6.75a.75.75 0 0 1 1.06 0l3.606 3.606a12.695 12.695 0 0 1 5.68-4.974l1.086-.483-4.251-1.632a.75.75 0 0 1-.432-.97Z" clip-rule="evenodd" />
+                        </svg>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Rast</h4>
                         <p class="text-gray-600 mb-4 font-medium">Razvoj poslovanja</p>
                         <ul class="text-sm text-gray-600 space-y-2">
@@ -587,7 +621,15 @@
                 <div class="timeline-step bg-white rounded-2xl p-8 lg:flex-1 transition-all duration-500 shadow-lg" data-step="5">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg">5</div>
-                        <div class="text-5xl mb-4">🏆</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto mb-4">
+                            <defs>
+                                <linearGradient id="iconGradientTrophy" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="15%" style="stop-color:hsla(222, 58%, 36%, 1)"/>
+                                    <stop offset="72%" style="stop-color:hsla(198, 100%, 50%, 1)"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#iconGradientTrophy)" fill-rule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 0 0-.584.859 6.753 6.753 0 0 0 6.138 5.6 6.73 6.73 0 0 0 2.743 1.346A6.707 6.707 0 0 1 9.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 0 0-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 0 1-1.112-3.173 6.73 6.73 0 0 0 2.743-1.347 6.753 6.753 0 0 0 6.139-5.6.75.75 0 0 0-.585-.858 47.077 47.077 0 0 0-3.07-.543V2.62a.75.75 0 0 0-.658-.744 49.22 49.22 0 0 0-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 0 0-.657.744Zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 0 1 3.16 5.337a45.6 45.6 0 0 1 2.006-.343v.256Zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 0 1-2.863 3.207 6.72 6.72 0 0 0 .857-3.294Z" clip-rule="evenodd" />
+                        </svg>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Uspeh</h4>
                         <p class="text-gray-600 mb-4 font-medium">Stabilno poslovanje</p>
                         <ul class="text-sm text-gray-600 space-y-2">
@@ -604,7 +646,7 @@
                 <div class="space-y-6">
                     <h3 class="text-3xl font-bold text-gray-900">Spremni Za Sledeći Korak?</h3>
                     <p class="text-gray-600 text-lg max-w-2xl mx-auto">Bez obzira na to gde se nalazite u vašem poslovnom putu, mi smo tu da vam pomognemo</p>
-                    <button class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg shadow-xl" onclick="scrollToContact()">Kontaktirajte Nas</button>
+                    <button class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate" onclick="scrollToContact()">Kontaktirajte Nas</button>
                 </div>
             </div>
         </div>
@@ -692,7 +734,7 @@
                     <h3 class="text-2xl font-bold text-white">Postanite Naš Sledeći Zadovoljni Klijent</h3>
                     <p class="text-gray-300 text-lg max-w-2xl mx-auto">Pridružite se stotinama zadovoljnih preduzeća u Crnoj Gori</p>
                     <div class="flex justify-center">
-                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg">
+                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
                             Započnite Saradnju
                         </button>
                     </div>
