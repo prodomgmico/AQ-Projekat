@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
@@ -12,6 +12,16 @@ module.exports = {
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
+      },
+      zIndex: {
+        41: '41',
+        42: '42',
+        43: '43',
+        44: '44',
+        45: '45',
+        60: '60',
+        70: '70',
+        80: '80',
       },
     },
   },

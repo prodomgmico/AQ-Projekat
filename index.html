@@ -34,7 +34,7 @@
                             aria-expanded="false" 
                             aria-controls="mobileMenu" 
                             aria-label="Toggle mobile navigation menu">
-                        <span class="text-xl">‚ò∞</span>
+                        <span class="text-xl">?</span>
                     </button>
                 </div>
             </nav>
@@ -49,11 +49,11 @@
                     </div>
                     
                     <!-- Navigation Links -->
-                    <a href="#home" class="nav-link">Poƒçetna</a>
-                    <a href="#services" class="nav-link">Usluge</a>
-                    <a href="#journey" class="nav-link">Put</a>
-                    <a href="#clients" class="nav-link">Klijenti</a>
-                    <a href="#contact" class="nav-link">Kontakt</a>
+                    <a href="#home" class="nav-link" data-i18n="nav.home">Pocetna</a>
+                    <a href="#services" class="nav-link" data-i18n="nav.services">Usluge</a>
+                    <a href="#journey" class="nav-link" data-i18n="nav.journey">Put</a>
+                    <a href="#clients" class="nav-link" data-i18n="nav.clients">Klijenti</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
                     
                     <!-- Language Selector -->
                     <div class="relative ml-4">
@@ -83,15 +83,15 @@
                 <h3 class="text-xl font-bold text-blue-600">AQ Accounting</h3>
                 <button class="text-2xl text-gray-600 hover:text-gray-800 transition-colors" 
                         id="mobileMenuClose" 
-                        aria-label="Close mobile menu">√ó</button>
+                        aria-label="Close mobile menu">◊</button>
             </div>
             <nav class="flex-1 px-6 py-8">
                 <div class="space-y-6">
-                    <a href="#home" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">Poƒçetna</a>
-                    <a href="#services" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">Usluge</a>
-                    <a href="#journey" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">Put</a>
-                    <a href="#clients" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">Klijenti</a>
-                    <a href="#contact" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">Kontakt</a>
+                    <a href="#home" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium" data-i18n="nav.home">Pocetna</a>
+                    <a href="#services" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium" data-i18n="nav.services">Usluge</a>
+                    <a href="#journey" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium" data-i18n="nav.journey">Put</a>
+                    <a href="#clients" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium" data-i18n="nav.clients">Klijenti</a>
+                    <a href="#contact" class="block text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium" data-i18n="nav.contact">Kontakt</a>
                     
                     <!-- Mobile Language Selector -->
                     <div class="pt-4 border-t border-white/20">
@@ -119,19 +119,19 @@
         <div class="max-w-7xl mx-auto px-6 pt-24 md:pt-32 pb-16">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
-                    <span class="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium animate-hidden animate-slide-top">
+                    <span class="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium animate-hidden animate-slide-top" data-i18n="hero.badge">
                         Profesionalno Knjigovodstvo
                     </span>
                     <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight animate-hidden animate-in">
-                        Pouzdani Partner<br>
-                        <span class="text-[#0F74BC]">Za Va≈° Biznis</span>
+                        <span data-i18n="hero.title">Pouzdani Partner</span><br>
+                        <span class="text-[#0F74BC]" data-i18n="hero.titleAccent">Za Vaö Biznis</span>
                     </h1>
                     <div class="space-y-4 text-lg text-gray-600 animate-hidden animate-in-left">
-                        <p>AQ Accounting pru≈æa kompletne knjigovodstvene usluge i biznis konsalting za preduzeƒáa u Crnoj Gori.</p>
-                        <p>Na≈° tim iskusnih struƒçnjaka poma≈æe va≈°em biznisu da raste kroz profesionalno finansijsko upravljanje.</p>
+                        <p data-i18n="hero.description1">AQ Accounting pruûa kompletne knjigovodstvene usluge i biznis konsalting za preduzeca u Crnoj Gori.</p>
+                        <p data-i18n="hero.description2">Naö tim iskusnih strucnjaka pomaûe vaöem biznisu da raste kroz profesionalno finansijsko upravljanje.</p>
                     </div>
                     <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
-                        Besplatna Konsultacija
+                        <span data-i18n="hero.cta">Besplatna Konsultacija</span>
                     </button>
                 </div>
                 <div class="relative animate-hidden animate-in-right">
@@ -154,27 +154,27 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="relative order-2 lg:order-1 animate-hidden animate-in-left">
                     <div class="bg-gray-700 h-96 rounded-2xl flex items-center justify-center text-gray-300 font-medium shadow-2xl hover-lift">
-                        Biznis Konsalting Slikaa
+                        <span data-i18n="services.items.2.title">Biznis Konsalting</span> Slikaa
                     </div>
                     <!-- Decorative elements -->
                     <div class="absolute -top-6 -left-6 w-24 h-24 bg-[#0F74BC] opacity-30 rounded-full"></div>
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[#0F74BC] opacity-20 rounded-full"></div>
                 </div>
                 <div class="space-y-8 order-1 lg:order-2">
-                    <span class="inline-block px-4 py-2 bg-[#0F74BC] text-white rounded-full text-sm font-medium animate-hidden animate-slide-top">
-                        Biznis Konsalting
+                <span data-i18n="consultingHero.badge" class="inline-block px-4 py-2 bg-[#0F74BC] text-white rounded-full text-sm font-medium animate-hidden animate-slide-top">
+                        <span data-i18n="services.items.2.title">Biznis Konsalting</span>
                     </span>
                     <h1 class="text-4xl lg:text-6xl font-bold leading-tight animate-hidden animate-in">
-                        Strategije Za<br>
-                        <span class="text-[#0F74BC]">Rast Va≈°eg Biznisa</span>
+                        <span data-i18n="consultingHero.title">Strategije Za</span><br>
+                        <span data-i18n="consultingHero.titleAccent" class="text-[#0F74BC]">Rast Vaöeg Biznisa</span>
                     </h1>
                     <div class="space-y-4 text-lg text-gray-300 animate-hidden animate-in-right">
-                        <p>Poma≈æemo preduzeƒáima da optimizuju svoje poslovne procese, smanje tro≈°kove i poveƒáaju profitabilnost.</p>
-                        <p>Kroz struƒçno savetovanje i strategije prilagoƒëene crnogorskom tr≈æi≈°tu.</p>
+                        <p data-i18n="consultingHero.description1">Pomaûemo preduzecima da optimizuju svoje poslovne procese, smanje troökove i povecaju profitabilnost.</p>
+                        <p data-i18n="consultingHero.description2">Kroz strucno savetovanje i strategije prilagodene crnogorskom trûiötu.</p>
                     </div>
                     <div class="flex justify-center sm:justify-start">
                         <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
-                            Kontaktirajte Nas
+                        <span data-i18n="consultingHero.cta">Kontaktirajte Nas</span>
                         </button>
                     </div>
                 </div>
@@ -189,21 +189,20 @@
         <div class="max-w-7xl mx-auto px-6 py-16">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
-                    <span class="inline-block px-4 py-2 bg-[#0F74BC] bg-opacity-10 text-[#0F74BC] rounded-full text-sm font-medium animate-hidden animate-slide-top">
+                        <span data-i18n="taxHero.badge" class="inline-block px-4 py-2 bg-[#0F74BC] bg-opacity-10 text-[#0F74BC] rounded-full text-sm font-medium animate-hidden animate-slide-top">
                         Poresko Savetovanje
                     </span>
                     <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight animate-hidden animate-in">
-                        Poreska Optimizacija<br>
-                        <span class="text-[#0F74BC]">I Savetovanje</span>
+                        <span data-i18n="taxHero.title">Poreska Optimizacija</span><br>
+                        <span data-i18n="taxHero.titleAccent" class="text-[#0F74BC]">I Savetovanje</span>
                     </h1>
                     <div class="space-y-4 text-lg text-gray-600 animate-hidden animate-in-left">
-                        <p>Obezbedimo da va≈° biznis bude u potpunosti usklaƒëen sa poreskim propisima Crne Gore.</p>
-                        <p>Na≈°e usluge ukljuƒçuju pripremu poreskih prijava, poresko planiranje i savetovanje za optimizaciju poreskih obaveza.</p>
+                        <p data-i18n="taxHero.description1">Obezbedimo da vaö biznis bude u potpunosti uskladen sa poreskim propisima Crne Gore.</p>
+                        <p data-i18n="taxHero.description2">Naöe usluge ukljucuju pripremu poreskih prijava, poresko planiranje i savetovanje za optimizaciju poreskih obaveza.</p>
                     </div>
                     <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
-                        Poƒçnite Danas
+                        <span data-i18n="taxHero.cta">Pocnite Danas</span>
                     </button>
-                </div>
                 <div class="relative animate-hidden animate-in-right">
                     <div class="bg-gray-200 h-96 rounded-2xl flex items-center justify-center text-gray-500 font-medium shadow-2xl hover-lift">
                         Poresko Savetovanje Slika
@@ -229,10 +228,10 @@
                         Pouzdanost. Preciznost. Rezultati.
                     </h3>
                     <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                        Va≈° Poslovni Uspeh Je Na≈° Prioritet
+                        Vaö Poslovni Uspeh Je Naö Prioritet
                     </h2>
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        Sa vi≈°e od 10 godina iskustva u ksiƒôgowskeodstvu i biznis konsaltingu, AQ Accounting je va≈° pouzdani partner za finansijski uspeh u Crnoj Gori. Na≈° struƒçni tim posveƒáen je va≈°em poslovnom rastu.
+                        Sa viöe od 10 godina iskustva u knjigovodstvu i biznis konsaltingu, AQ Accounting je vaö pouzdani partner za finansijski uspeh u Crnoj Gori. Naö strucni tim posvecen je vaöem poslovnom rastu.
                     </p>
                     <div class="flex justify-center lg:justify-start">
                         <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
@@ -257,7 +256,7 @@
     <section class="section-overlap animate-section py-20 bg-[#232629] text-white shadow-2xl relative z-45" id="stats" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl lg:text-4xl font-bold text-center mb-16 animate-hidden animate-in">
-                Brojke Koje Govore O Na≈°em Uspehe
+                Brojke Koje Govore O Naöem Uspehe
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center animate-hidden animate-scale">
@@ -270,7 +269,7 @@
                 </div>
                 <div class="text-center animate-hidden animate-scale">
                     <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="10000000" style="transform: translateX(-0.1em);">0</div>
-                    <div class="text-gray-300 font-medium">EUR Proknji≈æeno Godi≈°nje</div>
+                    <div class="text-gray-300 font-medium">EUR Proknjiûeno Godiönje</div>
                 </div>
                 <div class="text-center animate-hidden animate-scale">
                     <div class="text-4xl lg:text-6xl font-bold text-[#0F74BC] mb-2 counter" data-target="98">0%</div>
@@ -286,14 +285,14 @@
     <section class="section-overlap animate-section py-20 bg-gray-50 shadow-2xl relative z-44" id="services" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h3 class="text-sm font-semibold text-[#0F74BC] uppercase tracking-wide mb-3 animate-hidden animate-slide-top">
-                    Na≈°e Usluge
+                <h3 data-i18n="services.title" class="text-sm font-semibold text-[#0F74BC] uppercase tracking-wide mb-3 animate-hidden animate-slide-top">
+                    Naöe Usluge
                 </h3>
                 <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 animate-hidden animate-in">
-                    Kompletna Podr≈°ka Za Va≈° Biznis
+                    Kompletna Podröka Za Vaö Biznis
                 </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto animate-hidden animate-in">
-                    Profesionalne usluge prilagoƒëene potrebama va≈°eg preduzeƒáa u Crnoj Gori
+                <p data-i18n="services.description" class="text-lg text-gray-600 max-w-3xl mx-auto animate-hidden animate-in">
+                    Profesionalne usluge prilagodene potrebama vaöeg preduzeca u Crnoj Gori
                 </p>
             </div>
             
@@ -310,9 +309,9 @@
                             </defs>
                             <path fill="url(#iconGradient1)" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                         </svg>
-                        Voƒëenje Knjiga
+                        <span data-i18n="services.items.0.title">Vodenje Knjiga</span>
                     </h4>
-                    <p class="text-gray-600 mb-4">Kompletno voƒëenje poslovnih knjiga, izrada finansijskih izve≈°taja i meseƒçno izve≈°tavanje</p>
+                    <p data-i18n="services.items.0.description" class="text-gray-600 mb-4">Kompletno vodenje poslovnih knjiga, izrada finansijskih izvestaja i mesecno izvestavanje</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
@@ -320,14 +319,14 @@
                         </li>
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
-                            Finansijski izve≈°taji
+                            Finansijski izveötaji
                         </li>
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
-                            Meseƒçno zatvaranje
+                            Mesecno zatvaranje
                         </li>
                     </ul>
-                    <div class="text-lg font-bold text-[#0F74BC]">Od 150‚Ç¨/meseƒçno</div>
+                    <div class="text-lg font-bold text-[#0F74BC]">Od 150Ä/mjesecno</div>
                 </div>
 
                 <!-- Service 2 -->
@@ -342,9 +341,9 @@
                             </defs>
                             <path fill="url(#iconGradient2)" fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.902 7.098a3.75 3.75 0 0 1 3.903-.884.75.75 0 1 0 .498-1.415A5.25 5.25 0 0 0 8.005 9.75H7.5a.75.75 0 0 0 0 1.5h.054a5.281 5.281 0 0 0 0 1.5H7.5a.75.75 0 0 0 0 1.5h.505a5.25 5.25 0 0 0 6.494 2.701.75.75 0 1 0-.498-1.415 3.75 3.75 0 0 1-4.252-1.286h3.001a.75.75 0 0 0 0-1.5H9.075a3.77 3.77 0 0 1 0-1.5h3.675a.75.75 0 0 0 0-1.5h-3c.105-.14.221-.274.348-.402Z" clip-rule="evenodd" />
                         </svg>
-                        Poresko Savetovanje
+                        <span data-i18n="services.items.1.title">Poresko Savetovanje</span>
                     </h4>
-                    <p class="text-gray-600 mb-4">Priprema i podno≈°enje poreskih prijava, optimizacija poreskih obaveza</p>
+                    <p data-i18n="services.items.1.description" class="text-gray-600 mb-4">Priprema i podnoöenje poreskih prijava, optimizacija poreskih obaveza</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
@@ -359,7 +358,7 @@
                             PDV administracija
                         </li>
                     </ul>
-                    <div class="text-lg font-bold text-[#0F74BC]">Od 80‚Ç¨/prijava</div>
+                    <div class="text-lg font-bold text-[#0F74BC]">Od 80Ä/prijava</div>
                 </div>
 
                 <!-- Service 3 -->
@@ -374,9 +373,9 @@
                             </defs>
                             <path fill="url(#iconGradient3)" fill-rule="evenodd" d="M15.22 6.268a.75.75 0 0 1 .968-.431l5.942 2.28a.75.75 0 0 1 .431.97l-2.28 5.94a.75.75 0 1 1-1.4-.537l1.63-4.251-1.086.484a11.2 11.2 0 0 0-5.45 5.173.75.75 0 0 1-1.199.19L9 12.312l-6.22 6.22a.75.75 0 0 1-1.06-1.061l6.75-6.75a.75.75 0 0 1 1.06 0l3.606 3.606a12.695 12.695 0 0 1 5.68-4.974l1.086-.483-4.251-1.632a.75.75 0 0 1-.432-.97Z" clip-rule="evenodd" />
                         </svg>
-                        Biznis Konsalting
+                        <span data-i18n="services.items.2.title">Biznis Konsalting</span>
                     </h4>
-                    <p class="text-gray-600 mb-4">Strategije za rast biznisa, optimizacija procesa i finansijski saveti</p>
+                    <p data-i18n="services.items.2.description" class="text-gray-600 mb-4">Strategije za rast biznisa, optimizacija procesa i finansijski saveti</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
@@ -391,7 +390,7 @@
                             Strategije rasta
                         </li>
                     </ul>
-                    <div class="text-lg font-bold text-[#0F74BC]">Od 200‚Ç¨/projekat</div>
+                    <div class="text-lg font-bold text-[#0F74BC]">Od 200Ä/projekat</div>
                 </div>
 
                 <!-- Service 4 -->
@@ -406,9 +405,9 @@
                             </defs>
                             <path fill="url(#iconGradient4)" fill-rule="evenodd" d="M3 2.25a.75.75 0 0 0 0 1.5v16.5h-.75a.75.75 0 0 0 0 1.5H15v-18a.75.75 0 0 0 0-1.5H3ZM6.75 19.5v-2.25a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75ZM6 6.75A.75.75 0 0 1 6.75 6h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 6 6.75ZM6.75 9a.75.75 0 0 0 0 1.5h.75a.75.75 0 0 0 0-1.5h-.75ZM6 12.75a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM10.5 6a.75.75 0 0 0 0 1.5h.75a.75.75 0 0 0 0-1.5h-.75Zm-.75 3.75A.75.75 0 0 1 10.5 9h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM10.5 12a.75.75 0 0 0 0 1.5h.75a.75.75 0 0 0 0-1.5h-.75ZM16.5 6.75v15h5.25a.75.75 0 0 0 0-1.5H21v-12a.75.75 0 0 0 0-1.5h-4.5Zm1.5 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Zm.75 2.25a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75v-.008a.75.75 0 0 0-.75-.75h-.008ZM18 17.25a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
                         </svg>
-                        Osnivanje Firme
+                        <span data-i18n="services.items.3.title">Osnivanje Firme</span>
                     </h4>
-                    <p class="text-gray-600 mb-4">Kompletna podr≈°ka pri osnivanju preduzeƒáa, registracija i poƒçetne procedure</p>
+                    <p data-i18n="services.items.3.description" class="text-gray-600 mb-4">Kompletna podröka pri osnivanju preduzeca, registracija i pocetne procedure</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
@@ -416,14 +415,14 @@
                         </li>
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
-                            Otvaranje raƒçuna
+                            Otvaranje racuna
                         </li>
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
-                            Poƒçetne dozvole
+                            Pocetne dozvole
                         </li>
                     </ul>
-                    <div class="text-lg font-bold text-[#0F74BC]">Od 300‚Ç¨</div>
+                    <div class="text-lg font-bold text-[#0F74BC]">Od 300Ä</div>
                 </div>
 
                 <!-- Service 5 -->
@@ -439,13 +438,13 @@
                             <path fill="url(#iconGradient5)" fill-rule="evenodd" d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
                             <path fill="url(#iconGradient5)" d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
                         </svg>
-                        Obraƒçun Plata
+                        <span data-i18n="services.items.4.title">Obracun Plata</span>
                     </h4>
-                    <p class="text-gray-600 mb-4">Meseƒçni obraƒçun plata, doprinos i sve vezane obaveze prema zaposlenim</p>
+                    <p data-i18n="services.items.4.description" class="text-gray-600 mb-4">Mesecni obracun plata, doprinos i sve vezane obaveze prema zaposlenim</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
-                            Obraƒçun zarada
+                            Obracun zarada
                         </li>
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
@@ -453,10 +452,10 @@
                         </li>
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
-                            Izve≈°taji za fondove
+                            Izveötaji za fondove
                         </li>
                     </ul>
-                    <div class="text-lg font-bold text-[#0F74BC]">Od 15‚Ç¨/zaposleni</div>
+                    <div class="text-lg font-bold text-[#0F74BC]">Od 15Ä/zaposleni</div>
                 </div>
 
                 <!-- Service 6 -->
@@ -472,9 +471,9 @@
                             <path fill="url(#iconGradient6)" fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875ZM9.75 17.25a.75.75 0 0 0-1.5 0V18a.75.75 0 0 0 1.5 0v-.75Zm2.25-3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 .75-.75Zm3.75-1.5a.75.75 0 0 0-1.5 0V18a.75.75 0 0 0 1.5 0v-5.25Z" clip-rule="evenodd" />
                             <path fill="url(#iconGradient6)" d="M14.25 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Z" />
                         </svg>
-                        Finansijski Audit
+                        <span data-i18n="services.items.5.title">Finansijski Audit</span>
                     </h4>
-                    <p class="text-gray-600 mb-4">Detaljni pregled finansijskih knjiga i procedura, preporuke za pobolj≈°anje</p>
+                    <p data-i18n="services.items.5.description" class="text-gray-600 mb-4">Detaljni pregled finansijskih knjiga i procedura, preporuke za poboljsanje</p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-sm text-gray-600">
                             <span class="w-2 h-2 bg-[#0F74BC] rounded-full mr-3"></span>
@@ -489,18 +488,18 @@
                             Preporuke
                         </li>
                     </ul>
-                    <div class="text-lg font-bold text-[#0F74BC]">Od 500‚Ç¨</div>
+                    <div class="text-lg font-bold text-[#0F74BC]">Od 500Ä</div>
                 </div>
             </div>
             
             <!-- Services CTA -->
             <div class="text-center mt-16">
                 <div class="space-y-6">
-                    <h3 class="text-2xl font-bold text-gray-900">Potrebne Vam Profesionalne Usluge?</h3>
-                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">Kontaktirajte nas za besplatnu konsultaciju i prilagoƒëenu ponudu za va≈°e potrebe</p>
+                    <h3 data-i18n="services.ctaTitle" class="text-2xl font-bold text-gray-900">Potrebne Vam Profesionalne Usluge?</h3>
+                    <p data-i18n="services.ctaText" class="text-gray-600 text-lg max-w-2xl mx-auto">Kontaktirajte nas za besplatnu konsultaciju i prilagodenu ponudu za vaöe potrebe</p>
                     <div class="flex justify-center">
                         <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
-                            Zatra≈æite Ponudu
+                            Zatraûite Ponudu
                         </button>
                     </div>
                 </div>
@@ -514,14 +513,14 @@
     <section class="section-overlap animate-section py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 shadow-2xl relative z-43" id="journey" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">
-                    Va≈° Poslovni Put
+                <h3 data-i18n="services.title" class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">
+                    Vaö Poslovni Put
                 </h3>
                 <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
-                    Od Ideje Do Uspe≈°nog Biznisa
+                    Od Ideje Do Uspeönog Biznisa
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Pratimo vas kroz svaki korak va≈°eg poslovnog razvoja
+                    Pratimo vaö kroz svaki korak vaöeg poslovnog razvoja
                 </p>
             </div>
             
@@ -569,7 +568,7 @@
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Registracija u APR</li>
                             <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Poreska registracija</li>
-                            <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Otvaranje raƒçuna</li>
+                            <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Otvaranje racuna</li>
                         </ul>
                     </div>
                 </div>
@@ -613,7 +612,7 @@
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Upravljanje finansijama</li>
                             <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Optimizacija procesa</li>
-                            <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Pro≈°irenje tima</li>
+                            <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Proöirenje tima</li>
                         </ul>
                     </div>
                 </div>
@@ -635,17 +634,17 @@
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Redovni profiti</li>
                             <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Strategije ekspanzije</li>
-                            <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Dugoroƒçni plan</li>
+                            <li class="flex items-center justify-center"><span class="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>Dugorocni plan</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="mt-16 text-center">
-                <p class="text-gray-600 mb-8 text-lg">Gde se trenutno nalazite u va≈°em poslovnom putu?</p>
+                <p class="text-gray-600 mb-8 text-lg">Gde se trenutno nalazite u vaöem poslovnom putu?</p>
                 <div class="space-y-6">
-                    <h3 class="text-3xl font-bold text-gray-900">Spremni Za Sledeƒái Korak?</h3>
-                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">Bez obzira na to gde se nalazite u va≈°em poslovnom putu, mi smo tu da vam pomognemo</p>
+                    <h3 class="text-3xl font-bold text-gray-900">Spremni Za Sledeci Korak?</h3>
+                    <p data-i18n="services.ctaText" class="text-gray-600 text-lg max-w-2xl mx-auto">Bez obzira na to gde se nalazite u vaöem poslovnom putu, mi smo tu da vam pomognemo</p>
                     <button class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate" onclick="scrollToContact()">Kontaktirajte Nas</button>
                 </div>
             </div>
@@ -659,13 +658,13 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mb-3 animate-hidden animate-slide-top">
-                    Mi≈°ljenja Klijenata
+                    Miöljenja Klijenata
                 </h3>
                 <h2 class="text-3xl lg:text-5xl font-bold mb-4 animate-hidden animate-in ">
-                    ≈†ta Ka≈æu Na≈°i Zadovoljni Klijenti
+                    äta Kaûu Naöi Zadovoljni Klijenti
                 </h2>
                 <p class="text-lg text-gray-300 max-w-3xl mx-auto animate-hidden animate-in ">
-                    Na≈°i klijenti su na≈° najveƒái uspeh. Proƒçitajte kako smo pomogli preduzeƒáima iz Crne Gore da ostvare bolje finansijske rezultate.
+                    Naöi klijenti su naö najveci uspeh. Procitajte kako smo pomogli preduzecima iz Crne Gore da ostvare bolje finansijske rezultate.
                 </p>
             </div>
             
@@ -677,15 +676,15 @@
                             MR
                         </div>
                         <div class="ml-4">
-                            <h4 class="font-bold text-white">Marko Radoviƒá</h4>
+                            <h4 class="font-bold text-white">Marko Radovic</h4>
                             <p class="text-gray-400 text-sm">CEO, Tech Solutions</p>
                         </div>
                     </div>
                     <p class="text-gray-300 italic">
-                        "AQ Accounting nam je pomogio da optimizujemo na≈°e financije i smanjimo tro≈°kove za 30%. Njihov profesionalan pristup je izvanredan."
+                        "AQ Accounting nam je pomogio da optimizujemo naöe financije i smanjimo troökove za 30%. Njihov profesionalan pristup je izvanredan."
                     </p>
                     <div class="flex text-yellow-400 mt-4">
-                        ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê
+                        ?????
                     </div>
                 </div>
 
@@ -696,15 +695,15 @@
                             AP
                         </div>
                         <div class="ml-4">
-                            <h4 class="font-bold text-white">Ana Petroviƒá</h4>
+                            <h4 class="font-bold text-white">Ana Petrovic</h4>
                             <p class="text-gray-400 text-sm">Vlasnica, Boutique Fashion</p>
                         </div>
                     </div>
                     <p class="text-gray-300 italic">
-                        "Zahvaljujuƒái AQ Accounting-u, moja firma je registrovana u rekordnom vremenu. Sve je bilo jasno i transparentno."
+                        "Zahvaljujuci AQ Accounting-u, moja firma je registrovana u rekordnom vremenu. Sve je bilo jasno i transparentno."
                     </p>
                     <div class="flex text-yellow-400 mt-4">
-                        ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê
+                        ?????
                     </div>
                 </div>
 
@@ -715,15 +714,15 @@
                             NM
                         </div>
                         <div class="ml-4">
-                            <h4 class="font-bold text-white">Nikola Miliƒá</h4>
+                            <h4 class="font-bold text-white">Nikola Milic</h4>
                             <p class="text-gray-400 text-sm">Direktor, Import Export</p>
                         </div>
                     </div>
                     <p class="text-gray-300 italic">
-                        "Poresko savetovanje koje pru≈æaju je na najvi≈°em nivou. U≈°teƒëivanje na porezima je znaƒçajno uticalo na na≈° profit."
+                        "Poresko savetovanje koje pruûaju je na najviöem nivou. Uötedivanje na porezima je znacajno uticalo na naö profit."
                     </p>
                     <div class="flex text-yellow-400 mt-4">
-                        ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê
+                        ?????
                     </div>
                 </div>
             </div>
@@ -731,11 +730,11 @@
             <!-- Testimonials CTA -->
             <div class="text-center mt-16">
                 <div class="space-y-6">
-                    <h3 class="text-2xl font-bold text-white">Postanite Na≈° Sledeƒái Zadovoljni Klijent</h3>
-                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">Pridru≈æite se stotinama zadovoljnih preduzeƒáa u Crnoj Gori</p>
+                    <h3 class="text-2xl font-bold text-white">Postanite Naö Sledeci Zadovoljni Klijent</h3>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">Pridruûite se stotinama zadovoljnih preduzeca u Crnoj Gori</p>
                     <div class="flex justify-center">
                         <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg cta-animate">
-                            Zapoƒçnite Saradnju
+                            Zapocnite Saradnju
                         </button>
                     </div>
                 </div>
@@ -749,14 +748,14 @@
     <section class="section-overlap animate-section py-20 bg-gray-50 shadow-2xl relative z-41" id="contact" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">
+                <h3 data-i18n="services.title" class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">
                     Kontakt
                 </h3>
                 <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
-                    Spremni Smo Da Pomognemo Va≈°em Biznisu
+                    Spremni Smo Da Pomognemo Vaöem Biznisu
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Kontaktirajte nas za besplatnu konsultaciju i saznajte kako mo≈æemo unaprediti va≈°e finansijsko upravljanje.
+                    Kontaktirajte nas za besplatnu konsultaciju i saznajte kako moûemo unaprediti vaöe finansijsko upravljanje.
                 </p>
             </div>
             
@@ -765,12 +764,12 @@
                 <div class="bg-white rounded-2xl p-8 shadow-xl">
                     <form id="contactForm" class="space-y-6">
                         <div class="mb-6">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Po≈°aljite Upit</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Poöaljite Upit</h3>
                             <p class="text-gray-600 text-sm">Popunite formu ispod ili nas direktno pozovite na telefon</p>
                         </div>
                         
                         <div>
-                            <input type="text" id="name" name="name" placeholder="Va≈°e Ime*" required autocomplete="name" 
+                            <input type="text" id="name" name="name" placeholder="Vaöe Ime*" required autocomplete="name" 
                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
                         </div>
                         
@@ -785,12 +784,12 @@
                         </div>
                         
                         <div>
-                            <textarea id="message" name="message" placeholder="Opi≈°ite Va≈°e Potrebe" rows="4" autocomplete="off"
+                            <textarea id="message" name="message" placeholder="Opiöite Vaöe Potrebe" rows="4" autocomplete="off"
                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"></textarea>
                         </div>
                         
                         <button type="submit" class="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg">
-                            Po≈°aljite Upit
+                            Poöaljite Upit
                         </button>
                         
                         <div class="text-center pt-4">
@@ -872,7 +871,7 @@
     <!-- ================================ -->
     <footer class="section-overlap bg-gray-900 text-white py-12 shadow-2xl relative z-80" style="border-top-left-radius: 1.5rem !important; border-top-right-radius: 1.5rem !important; position: relative; margin-top: -1.5rem;">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-gray-400">&copy; 2025 AQ Accounting. Sva prava zadr≈æana.</p>
+            <p class="text-gray-400">© 2025 AQ Accounting. Sva prava zadrûana.</p>
         </div>
     </footer>
 
@@ -880,3 +879,19 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

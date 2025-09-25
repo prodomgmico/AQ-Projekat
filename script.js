@@ -1288,3 +1288,169 @@ function initAdvancedTimelineAnimation() {
         window.removeEventListener('resize', handleResize);
     };
 }
+
+// Minimal helper: close mobile menu and smooth-scroll to #contact
+(function(){
+  function closeMobileMenu() {
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobileNavToggle = document.getElementById('mobileNavToggle');
+    if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+      mobileMenu.classList.add('translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+      if (mobileNavToggle) {
+        mobileNavToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+  }
+  function scrollToContact() {
+    var section = document.getElementById('contact');
+    if (section && section.scrollIntoView) {
+      try { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      catch(e) { section.scrollIntoView(true); }
+    }
+    closeMobileMenu();
+  }
+  // Expose for inline onclick handlers in HTML
+  window.scrollToContact = scrollToContact;
+})();
+
+// Minimal language toggle (no content translation)
+(function(){
+  var SUPPORTED = ['me','en'];
+  var KEY = 'aq-language';
+
+  function getStored() {
+    try { return localStorage.getItem(KEY) || ''; } catch(e){ return ''; }
+  }
+  function store(lang) {
+    try { localStorage.setItem(KEY, lang); } catch(e){}
+  }
+  function current() {
+    var htmlLang = (document.documentElement && document.documentElement.lang || '').toLowerCase();
+    var saved = (getStored() || htmlLang || 'me').toLowerCase();
+    return SUPPORTED.indexOf(saved) !== -1 ? saved : 'me';
+  }
+
+  function updateUI(lang) {
+    // Header badge
+    var cur = document.getElementById('currentLang');
+    if (cur) cur.textContent = (lang || 'me').toUpperCase();
+
+    // Mobile buttons visual state
+    var meBtn = document.getElementById('mobileLangME');
+    var enBtn = document.getElementById('mobileLangEN');
+    if (meBtn && enBtn) {
+      if (lang === 'me') {
+        meBtn.classList.add('bg-blue-600','text-white');
+        enBtn.classList.remove('bg-blue-600','text-white');
+        enBtn.classList.add('bg-gray-200','text-gray-700');
+      } else if (lang === 'en') {
+        enBtn.classList.add('bg-blue-600','text-white');
+        meBtn.classList.remove('bg-blue-600','text-white');
+        meBtn.classList.add('bg-gray-200','text-gray-700');
+      }
+    }
+  }
+
+  function closeDropdown() {
+    var dd = document.getElementById('languageDropdown');
+    if (dd) dd.classList.add('hidden');
+  }
+  function closeMobileMenu() {
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobileNavToggle = document.getElementById('mobileNavToggle');
+    if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+      mobileMenu.classList.add('translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+      if (mobileNavToggle) mobileNavToggle.setAttribute('aria-expanded','false');
+    }
+  }
+
+  function setLanguage(lang) {
+    var normalized = (lang || 'me').toLowerCase();
+    if (SUPPORTED.indexOf(normalized) === -1) return;
+    document.documentElement.lang = normalized;
+    updateUI(normalized);
+    store(normalized);
+    closeDropdown();
+    closeMobileMenu();
+  }
+
+  function initLanguageSelector() {
+    // Toggle dropdown
+    var toggle = document.getElementById('languageToggle');
+    var dropdown = document.getElementById('languageDropdown');
+    if (toggle && dropdown) {
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+      document.addEventListener('click', function(e){
+        if (!dropdown.contains(e.target) && e.target !== toggle) dropdown.classList.add('hidden');
+      });
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') dropdown.classList.add('hidden'); });
+    }
+
+    // Mobile inline buttons already call setLanguage via onclick; also wire events if needed
+    var meBtn = document.getElementById('mobileLangME');
+    var enBtn = document.getElementById('mobileLangEN');
+    if (meBtn) meBtn.addEventListener('click', function(){ setLanguage('me'); });
+    if (enBtn) enBtn.addEventListener('click', function(){ setLanguage('en'); });
+
+    // Desktop dropdown buttons also use inline onclick("setLanguage('me')"), expose global
+    window.setLanguage = setLanguage;
+
+    // Initialize from saved preference
+    updateUI(current());
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    try { updateUI(current()); } catch(e){}
+    initLanguageSelector();
+  });
+})();
+// Lightweight i18n for navbar + hero1 (applies only for EN)
+(function(){
+  var CACHE = {};
+  function get(path, obj){
+    try { return path.split('.').reduce(function(a,k){ return (a||{})[k]; }, obj); } catch(e){ return undefined; }
+  }
+  function applyTranslations(dict){
+    if (!dict) return;
+    var nodes = document.querySelectorAll('[data-i18n]');
+    nodes.forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      var val = get(key, dict);
+      if (typeof val === 'string') { el.textContent = val; }
+    });
+  }
+  function load(lang){
+    if (CACHE[lang]) return Promise.resolve(CACHE[lang]);
+    return fetch('./locales/' + lang + '.json', { cache: 'no-cache' })
+      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+      .then(function(json){ CACHE[lang]=json; return json; })
+      .catch(function(){ return null; });
+  }
+  function current(){
+    try { return (localStorage.getItem('aq-language') || document.documentElement.lang || 'me').toLowerCase(); }
+    catch(e){ return (document.documentElement.lang || 'me').toLowerCase(); }
+  }
+  function refresh(){
+    var lang = current();
+    if (lang === 'en') {
+      load('en').then(applyTranslations);
+    }
+    // for 'me' do nothing; original text stays
+  }
+  // Hook into existing setLanguage if present
+  var prev = window.setLanguage;
+  window.setLanguage = function(lang){
+    try { if (typeof prev === 'function') prev(lang); } finally {
+      if ((lang||'').toLowerCase() === 'en') {
+        load('en').then(applyTranslations);
+      }
+    }
+  };
+  document.addEventListener('DOMContentLoaded', refresh);
+})();
