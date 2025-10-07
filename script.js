@@ -1,14 +1,14 @@
-// ================================
+﻿// ================================
 // AQ ACCOUNTING - SIMPLE VANILLA JS
 // ================================
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    console.log('🔍 Initializing Mobile-Optimized Vanilla JS system...');
+    
     
     // Detect mobile device for optimized animations
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-    console.log('📱 Mobile device detected:', isMobile);
+    
     
     // Add mobile-specific CSS optimizations
     if (isMobile) {
@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounters();
 });
 
-// 🎯 HIDE ANIMATION ELEMENTS INITIALLY
+// ðŸŽ¯ HIDE ANIMATION ELEMENTS INITIALLY
 function hideAnimationElements() {
-    console.log('🎯 Hiding animation elements initially...');
+    
     
     // Find all sections that will be animated
     const animateSections = document.querySelectorAll('.animate-section');
@@ -117,12 +117,12 @@ function hideAnimationElements() {
         });
     });
     
-    console.log('✅ Animation elements hidden for', animateSections.length, 'sections');
+    
 }
 
-// 📱 MOBILE CSS OPTIMIZATIONS
+// ðŸ“± MOBILE CSS OPTIMIZATIONS
 function addMobileOptimizations() {
-    console.log('📱 Adding mobile-specific CSS optimizations...');
+    
     
     // Create style element for mobile optimizations
     const mobileCSS = document.createElement('style');
@@ -196,15 +196,15 @@ function addMobileOptimizations() {
     document.head.appendChild(mobileCSS);
 }
 
-// 🎯 MOBILE-OPTIMIZED VANILLA JS SCROLL ANIMATIONS
+// ðŸŽ¯ MOBILE-OPTIMIZED VANILLA JS SCROLL ANIMATIONS
 function initMobileOptimizedAnimations(isMobile) {
-    console.log('🎬 Initializing mobile-optimized animations...');
+    
     
     const sections = document.querySelectorAll('.animate-section');
-    console.log(`🔍 Found ${sections.length} sections to animate`);
+    
     
     if (sections.length === 0) {
-        console.warn('⚠️ No sections found with .animate-section class');
+        console.warn('âš ï¸ No sections found with .animate-section class');
         return;
     }
 
@@ -221,7 +221,7 @@ function initMobileOptimizedAnimations(isMobile) {
                 const contentElements = entry.target.querySelectorAll('h1, h2, h3, p, .grid, .flex, .space-y-8, .max-w-7xl, .service-card, .timeline-step, .testimonial-card');
                 
                 if (isMobile) {
-                    // MOBILE: Manual animation với shorter stagger
+                    // MOBILE: Manual animation vá»›i shorter stagger
                     contentElements.forEach((element, index) => {
                         setTimeout(() => {
                             startMobileFadeIn(element);
@@ -236,7 +236,7 @@ function initMobileOptimizedAnimations(isMobile) {
                     });
                 }
                 
-                console.log('✨ Optimized animation for', contentElements.length, 'elements (mobile:', isMobile, ')');
+                console.log('âœ¨ Optimized animation for', contentElements.length, 'elements (mobile:', isMobile, ')');
             }
         });
     }, observerOptions);
@@ -263,7 +263,7 @@ function initMobileOptimizedAnimations(isMobile) {
         scrollObserver.observe(section);
     });
     
-    console.log(`👀 Observing ${sections.length} sections with mobile optimization:`, isMobile);
+    
 }
 
 function startMobileFadeIn(element) {
@@ -291,7 +291,7 @@ function startMobileFadeIn(element) {
             element.style.opacity = '1';
             element.style.transform = 'translateY(0px)';
             element.style.willChange = 'auto';
-            console.log('📱 Mobile animation completed for element');
+            
         }
     }
     
@@ -314,7 +314,7 @@ function animateVanillaCounter(element) {
     const duration = 2000; // 2 seconds
     const startTime = Date.now();
     
-    // Proveravamo da li je ovo procenat ili običan broj
+    // Proveravamo da li je ovo procenat ili obiÄan broj
     const isPercentage = element.textContent.includes('%');
     const suffix = isPercentage ? '%' : '+';
     
@@ -333,7 +333,7 @@ function animateVanillaCounter(element) {
         current = target * easedProgress;
         const displayNumber = Math.floor(current);
         
-        // Formatiranje sa zarezima i dodavanje odgovarajućeg sufiksa
+        // Formatiranje sa zarezima i dodavanje odgovarajuÄ‡eg sufiksa
         element.textContent = formatNumber(displayNumber) + suffix;
         
         if (progress < 1) {
@@ -346,24 +346,24 @@ function animateVanillaCounter(element) {
     requestAnimationFrame(updateCounter);
 }
 
-// 🎯 TIMELINE ANIMATION WITH OUTLINE BOTTOM TIMERS
+// ðŸŽ¯ TIMELINE ANIMATION WITH OUTLINE BOTTOM TIMERS
 function initTimelineAnimation() {
-    console.log('🔧 Starting initTimelineAnimation...');
+    
     
     const isMobile = window.innerWidth <= 768;
     if (isMobile) {
-        console.log('📱 Mobile detected - skipping desktop timeline');
+        
         return; // Skip desktop timeline on mobile
     }
     
     const journeySection = document.querySelector('#journey');
     const timelineSteps = document.querySelectorAll('.timeline-step');
     
-    console.log('🔍 Found journey section:', !!journeySection);
-    console.log('🔍 Found timeline steps:', timelineSteps.length);
+    
+    
     
     if (!journeySection || timelineSteps.length === 0) {
-        console.log('❌ Missing required elements for timeline');
+        
         return;
     }
     
@@ -377,7 +377,7 @@ function initTimelineAnimation() {
     const STEP_DELAY = 3000; // 3 seconds delay between steps
     const CYCLE_PAUSE = 10000; // 10 seconds pause before restart
     
-    console.log('✅ Initializing timeline with', timelineSteps.length, 'steps');
+    
     
     // Add CSS for spotlight effect
     const spotlightCSS = document.createElement('style');
@@ -464,7 +464,7 @@ function initTimelineAnimation() {
     
     // Timer function for active step (outline bottom only)
     function startStepTimer(activeStep) {
-        console.log('⏱️ Starting fluid timer for active step');
+        
         
         // Reset any existing timer
         if (activeStep.timerAnimation) {
@@ -483,7 +483,7 @@ function initTimelineAnimation() {
             if (progress >= 100) {
                 progress = 100;
                 clearInterval(activeStep.timerAnimation);
-                console.log('⏱️ Fluid timer completed for step');
+                
             }
             
             // Update step timer only
@@ -502,12 +502,12 @@ function initTimelineAnimation() {
             // Don't reset timer width here - let each step maintain its state
         });
         
-        console.log('🧹 All step timers cleared (emergency cleanup)');
+        console.log('ðŸ§¹ All step timers cleared (emergency cleanup)');
     }
     
     // Function to start automatic progression (cyclical)
     function startAutomaticProgression() {
-        console.log('🤖 Starting cyclical timeline progression');
+        
         
         // Clear any existing timers
         if (autoProgressTimer) {
@@ -519,14 +519,14 @@ function initTimelineAnimation() {
         
         function progressToNextStep() {
             if (!isTimelineActive) {
-                console.log('🤖 Auto progression stopped - timeline not active');
+                
                 return;
             }
             
             if (currentStep < timelineSteps.length - 1) {
                 currentStep++;
                 updateTimelineStep(currentStep);
-                console.log('🤖 Auto progressed to step:', currentStep + 1, '/', timelineSteps.length);
+                
                 
                 // Check if this was the last step
                 if (currentStep === timelineSteps.length - 1) {
@@ -547,7 +547,7 @@ function initTimelineAnimation() {
     
     // Function to restart the cycle after pause
     function startCycleRestart() {
-        console.log('🔄 Starting 10 second pause before cycle restart...');
+        
         
         // Keep all steps completed during pause
         timelineSteps.forEach(step => {
@@ -559,7 +559,7 @@ function initTimelineAnimation() {
         // 10 second pause, then restart
         cycleRestartTimer = setTimeout(() => {
             if (isTimelineActive) {
-                console.log('🔄 Restarting timeline cycle');
+                
                 currentStep = 0;
                 journeyCompleted = false;
                 
@@ -570,7 +570,7 @@ function initTimelineAnimation() {
     }
     
     function updateTimelineStep(stepIndex) {
-        console.log('🔄 Updating to step:', stepIndex + 1, '/', timelineSteps.length);
+        
         
         // Clear only active step timer (not completed ones)
         timelineSteps.forEach((step, index) => {
@@ -616,18 +616,18 @@ function initTimelineAnimation() {
         // Clear transitioning state after animation completes
         setTimeout(() => {
             isStepTransitioning = false;
-            console.log('✅ Step transition completed');
+            
         }, STEP_DELAY);
     }
     
     // Intersection observer to trigger timeline (20% viewport)
     const timelineObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            console.log('👁️ Journey section intersection:', entry.intersectionRatio);
+            
             
             if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
                 if (!isTimelineActive) {
-                    console.log('🎬 Timeline activated at 20% viewport visibility');
+                    
                     
                     isTimelineActive = true;
                     currentStep = 0;
@@ -637,11 +637,11 @@ function initTimelineAnimation() {
                     // Start automatic cyclical progression
                     startAutomaticProgression();
                     
-                    console.log('🎬 Cyclical timeline started!');
+                    
                 }
             } else if (!entry.isIntersecting || entry.intersectionRatio <= 0.1) {
                 if (isTimelineActive) {
-                    console.log('🛑 Timeline deactivated - out of viewport');
+                    
                     
                     // Stop timeline when out of view
                     isTimelineActive = false;
@@ -687,12 +687,12 @@ function initTimelineAnimation() {
     });
     
     timelineObserver.observe(journeySection);
-    console.log('👁️ Timeline observer attached (20% viewport trigger)');
+    console.log('ðŸ‘ï¸ Timeline observer attached (20% viewport trigger)');
     
     // Emergency stop with Escape key
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && isTimelineActive) {
-            console.log('🆘 Emergency stop with Escape key');
+            
             
             // Stop timeline completely
             isTimelineActive = false;
@@ -719,7 +719,7 @@ function initTimelineAnimation() {
                 step.style.setProperty('--timer-width', '0%');
             });
             
-            console.log('🛑 Timeline stopped and reset');
+            
         }
     });
 }
@@ -737,7 +737,7 @@ function initContactForm() {
             const message = this.querySelector('textarea').value;
             
             if (name && email && message) {
-                alert('Hvala vam! Vaša poruka je poslana. Kontaktiraćemo vas uskoro.');
+                alert('Hvala vam! VaÅ¡a poruka je poslana. KontaktiraÄ‡emo vas uskoro.');
                 this.reset();
             } else {
                 alert('Molim vas popunite sva polja.');
@@ -794,7 +794,7 @@ function initCounters() {
     const statsSection = document.querySelector('#stats'); // Simple ID selector
     
     if (!statsSection) {
-        console.log('Stats section not found, falling back to individual counter observation');
+        
         // Fallback to original logic if section not found
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -811,12 +811,12 @@ function initCounters() {
         return;
     }
     
-    console.log('Stats section found, setting up synchronized counter animation');
+    
     
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.hasAttribute('data-counters-started')) {
-                console.log('Stats section in viewport, starting all counters');
+                
                 entry.target.setAttribute('data-counters-started', 'true');
                 
                 // Start all counters at the same time
@@ -833,24 +833,24 @@ function initCounters() {
     counterObserver.observe(statsSection);
 }
 
-// 🎯 MOBILE HOVER-LIKE VIEWPORT EFFECT
+// ðŸŽ¯ MOBILE HOVER-LIKE VIEWPORT EFFECT
 function initMobileHoverEffect() {
-    console.log('🔦 Starting mobile hover effect...');
+    
     
     const isMobile = window.innerWidth <= 768;
     if (!isMobile) {
-        console.log('🖥️ Desktop mode - skipping mobile hover');
+        
         return;
     }
     
     const timelineSteps = document.querySelectorAll('.timeline-step');
     
     if (timelineSteps.length === 0) {
-        console.log('❌ Timeline steps not found');
+        
         return;
     }
     
-    console.log('✅ Mobile hover found with', timelineSteps.length, 'cards');
+    
     
     // Fluid 400ms spotlight hover effect with continuous intensity via CSS variable
     const hoverCSS = document.createElement('style');
@@ -939,27 +939,27 @@ function initMobileHoverEffect() {
     window.addEventListener('scroll', () => requestAnimationFrame(updateHighlight), { passive: true });
     window.addEventListener('resize', () => requestAnimationFrame(updateHighlight));
 
-    console.log('🎯 Mobile hover effect initialized (continuous 400ms spotlight)');
+    console.log('ðŸŽ¯ Mobile hover effect initialized (continuous 400ms spotlight)');
 }
 
-// 🎯 SMOOTH MOBILE TIMELINE - NO TIMERS, NO SECKANJE  
+// ðŸŽ¯ SMOOTH MOBILE TIMELINE - NO TIMERS, NO SECKANJE  
 function initSmoothMobileTimeline() {
-    console.log('🔦 Starting smooth mobile timeline...');
+    
     
     const isMobile = window.innerWidth <= 768;
     if (!isMobile) {
-        console.log('🖥️ Desktop mode - skipping mobile timeline');
+        
         return;
     }
     
     const timelineSteps = document.querySelectorAll('.timeline-step');
     
     if (timelineSteps.length === 0) {
-        console.log('❌ Timeline steps not found');
+        
         return;
     }
     
-    console.log('✅ Smooth mobile timeline found with', timelineSteps.length, 'cards');
+    
     
     // Progressive hover-like CSS animations for mobile viewport
     const spotlightCSS = document.createElement('style');
@@ -1146,15 +1146,15 @@ function initSmoothMobileTimeline() {
             if (index === 0 && distanceFromCenter < maxDistance) {
                 // Closest card - main spotlight
                 card.classList.add('spotlight-active');
-                console.log(`🎯 Spotlight ACTIVE on step ${card.getAttribute('data-step')}`);
+                console.log(`ðŸŽ¯ Spotlight ACTIVE on step ${card.getAttribute('data-step')}`);
             } else if (index <= 1 && distanceFromCenter < maxDistance * 1.5) {
                 // Second closest - entering state
                 card.classList.add('spotlight-entering');
-                console.log(`� Spotlight ENTERING on step ${card.getAttribute('data-step')}`);
+                console.log(`ï¿½ Spotlight ENTERING on step ${card.getAttribute('data-step')}`);
             } else if (distanceFromCenter < maxDistance * 2) {
                 // Further away - leaving state
                 card.classList.add('spotlight-leaving');
-                console.log(`🌫️ Spotlight LEAVING on step ${card.getAttribute('data-step')}`);
+                console.log(`ðŸŒ«ï¸ Spotlight LEAVING on step ${card.getAttribute('data-step')}`);
             }
             // Cards beyond this range get default (dim) styling
         });
@@ -1166,27 +1166,27 @@ function initSmoothMobileTimeline() {
     // Add scroll listener
     window.addEventListener('scroll', handleScroll, { passive: true });
     
-    console.log('🎯 Smooth mobile timeline initialized');
+    
 }
 
-// 🎯 VIEWPORT-BASED SPOTLIGHT EFFECT FOR MOBILE TIMELINE
+// ðŸŽ¯ VIEWPORT-BASED SPOTLIGHT EFFECT FOR MOBILE TIMELINE
 function initAdvancedTimelineAnimation() {
-    console.log('� Starting viewport spotlight timeline...');
+    
     
     const isMobile = window.innerWidth <= 768;
     if (!isMobile) {
-        console.log('🖥️ Desktop mode - using standard timeline');
+        
         return;
     }
     
     const timelineSteps = document.querySelectorAll('.timeline-step');
     
     if (timelineSteps.length === 0) {
-        console.log('❌ Timeline steps not found');
+        
         return;
     }
     
-    console.log('✅ Spotlight timeline found with', timelineSteps.length, 'cards');
+    
     
     // Add spotlight CSS for viewport-based highlighting
     const spotlightCSS = document.createElement('style');
@@ -1250,7 +1250,7 @@ function initAdvancedTimelineAnimation() {
             if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
                 // Add spotlight to this card
                 card.classList.add('viewport-spotlight');
-                console.log(`� Spotlight on step ${card.getAttribute('data-step')}`);
+                console.log(`ï¿½ Spotlight on step ${card.getAttribute('data-step')}`);
             } else {
                 // Remove spotlight from this card
                 card.classList.remove('viewport-spotlight');
@@ -1277,7 +1277,7 @@ function initAdvancedTimelineAnimation() {
     
     window.addEventListener('resize', handleResize);
     
-    console.log('🎯 Viewport spotlight timeline initialized');
+    
     
     // Cleanup function
     return () => {
@@ -1453,4 +1453,16 @@ function initAdvancedTimelineAnimation() {
     }
   };
   document.addEventListener('DOMContentLoaded', refresh);
+})();
+
+// Defer heavier initializations to idle to improve TTI
+(function(){
+  var ric = window.requestIdleCallback || function(cb){ setTimeout(cb,150); };
+  document.addEventListener('DOMContentLoaded', function(){
+    ric(function(){
+      try { if (typeof initTimelineAnimation==='function') initTimelineAnimation(); } catch(e){}
+      try { if (typeof initMobileHoverEffect==='function') initMobileHoverEffect(); } catch(e){}
+      try { if (typeof initCounters==='function') initCounters(); } catch(e){}
+    });
+  });
 })();

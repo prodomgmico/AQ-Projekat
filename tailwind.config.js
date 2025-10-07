@@ -1,6 +1,6 @@
 ﻿/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -8,7 +8,7 @@ module.exports = {
         'light-blue': '#60a5fa',
         'dark-gray': '#232629',
         'light-gray': '#f8fafc',
-  'hero': '#f8fdff',
+        'hero': '#f8fdff',
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
@@ -22,6 +22,7 @@ module.exports = {
         60: '60',
         70: '70',
         80: '80',
+        90: '90',
       },
     },
   },
